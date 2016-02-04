@@ -15,7 +15,7 @@ public class Node<T>
         this.children = new ArrayList<Node<T>>();
     }
 
-    public Node<T> addChild(Node<T> child)
+    public Node<T> addChild(T child)
     {
         Node<T> childNode = new Node<T>(child);
         childNode.parent = this;

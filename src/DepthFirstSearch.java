@@ -7,7 +7,7 @@ public class DepthFirstSearch<T>
     public Node<T> goal;
     public Hashtable<Node<T>, Boolean> visited;
 
-    public Node<T> DepthFirstSearch(Node<T> root, Node<T> goal)
+    public boolean DepthFirstSearch(Node<T> root, Node<T> goal)
     {
         this.root = root;
         this.goal = goal;
@@ -15,6 +15,7 @@ public class DepthFirstSearch<T>
         if(this.root == this.goal)
         {
             System.out.println("The goal has been reached.");
+            return true;
 
         } else {
             if(root.children.size()-1 >0)
@@ -24,9 +25,9 @@ public class DepthFirstSearch<T>
                     DepthFirstSearch(child, goal);
                 }
             }
-        }
 
-        return this.root;
+            return false;
+        }
     }
 
 }

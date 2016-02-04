@@ -3,14 +3,28 @@
  */
 public class Main
 {
+
+    public static Node<String> rootNode;
+    public static Node<String> childOne;
+    public static Node<String> childTwo;
+    public static Node<String> childThree;
+    public static DepthFirstSearch dfs;
+
     public static void main(String [] args)
     {
-        Node<String> rootOne = new Node<String>("1");
-        Node<String> rootTwo = new Node<String>("2");
-        Node<String> rootrhree = new Node<String>("3");
-        Node<String> rootFour = new Node<String>("4");
-        Node<String> rootFive = new Node<String>("5");
+        //initializing variables
+        rootNode = new Node<String>("rootNode");
+        childOne = new Node<String>("childOne");
+        childTwo = new Node<String>("childTwo");
+        childThree = new Node<String>("childThree");
+        dfs = new DepthFirstSearch();
 
-        rootOne.addChild()
+        //building the trees
+        rootNode.addChild(childOne);
+        rootNode.addChild(childThree);
+        childOne.addChild(childTwo);
+
+        dfs.DepthFirstSearch(rootNode, childTwo);
+
     }
 }
