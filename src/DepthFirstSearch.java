@@ -18,13 +18,9 @@ public class DepthFirstSearch<T>
             return true;
 
         } else {
-            if(root.children.size()-1 >0)
-            {
-                for(Node<T>child: root.children)
-                {
+                for(Node<T>child: root.children) {
                     DepthFirstSearch(child, goal);
                 }
-            }
 
             return false;
         }

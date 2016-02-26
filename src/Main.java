@@ -13,10 +13,10 @@ public class Main
     public static void main(String [] args)
     {
         //initializing variables
-        rootNode = new Node<String>("rootNode");
-        childOne = new Node<String>("childOne");
-        childTwo = new Node<String>("childTwo");
-        childThree = new Node<String>("childThree");
+        rootNode = new Node<>("rootNode");
+        childOne = new Node<>("childOne");
+        childTwo = new Node<>("childTwo");
+        childThree = new Node<>("childThree");
         dfs = new DepthFirstSearch();
 
         //building the trees
@@ -24,7 +24,7 @@ public class Main
         rootNode.addChild(childThree);
         childOne.addChild(childTwo);
 
-        dfs.DepthFirstSearch(rootNode, childTwo);
+       System.out.print(dfs.DepthFirstSearch(rootNode, rootNode));
 
     }
 }
